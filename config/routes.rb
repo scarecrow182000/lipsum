@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'note/index'
 
-  get 'note/show'
+
+  root to: "note#index"
+
+  get 'note/:id' => "note#show", as: :note
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.

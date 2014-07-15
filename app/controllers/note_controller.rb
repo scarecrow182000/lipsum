@@ -6,6 +6,6 @@ class NoteController < ApplicationController
   end
 
   def show
-    @note = Note.find_params[:id]
+    @note = Note.find params[:id]
   end
 end

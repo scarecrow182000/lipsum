@@ -1,9 +1,11 @@
 <h1>Notes</h1>
 
 <ul class="notes-list">
-  <li>
-    <%= @notes.each do |note| %>
-    <%= link_to note.name, path_to note.params[:id]  %>
+    <% @notes.each do |note| %>
+<li>
+
+    <%= link_to note.name, note_path(note.id)  %>
+</li>
+
     <% end %>
-  </li>
 </ul>
